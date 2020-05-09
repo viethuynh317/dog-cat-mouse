@@ -1,8 +1,10 @@
-function Mouse(name, weight){
+function Mouse(name){
 this.name = name;
-this.weight = weight;
+this.dead = false;
 }
-var mouse1 = new Mouse('Mickey', 1.5);
-console.log(mouse1);
+
+Mouse.prototype.die= function() {
+	this.dead = true;
+};
 
 module.exports = Mouse; 
